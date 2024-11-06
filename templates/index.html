@@ -1,0 +1,244 @@
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <title>
+            IoT Dashboard
+        </title>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="styles.css" />
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    </head>
+    <body>
+        <div class="sidebar">
+            <h2>
+                IoT Dashboard
+            </h2>
+            <a href="#">
+                <i class="fas fa-map-marker-alt"> </i>
+                Location A
+            </a>
+            <a href="#">
+                <i class="fas fa-map-marker-alt"> </i>
+                Location B
+            </a>
+            <a href="#">
+                <i class="fas fa-map-marker-alt"> </i>
+                Location C
+            </a>
+            <div class="divider"></div>
+            <div class="location-info">
+                Currently viewing: Location A
+            </div>
+            <a href="#">
+                <i class="fas fa-chart-line"> </i>
+                Analytics
+            </a>
+            <a href="#">
+                <i class="fas fa-bell"> </i>
+                Notifications
+            </a>
+            <a href="#">
+                <i class="fas fa-user"> </i>
+                Profile
+            </a>
+            <a href="#">
+                <i class="fas fa-sign-out-alt"> </i>
+                Logout
+            </a>
+        </div>
+        <div class="main-content">
+            <div class="header">
+                <div class="info">
+                    <div>
+                        <i class="fas fa-clock"> </i>
+                        <span id="current-time"> </span>
+                    </div>
+                    <div>
+                        <i class="fas fa-users"> </i>
+                        <span>
+                            Number of People: 5
+                        </span>
+                    </div>
+                    <div>
+                        <i class="fas fa-thermometer-half"> </i>
+                        <span id="temperature">
+                            Temperature :
+                        </span>
+                    </div>
+                    <div>
+                        <i class="fas fa-wifi"> </i>
+                        <span id="status">
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="insight-section">
+                <h2>
+                    Insights
+                </h2>
+                <div class="insight-item">
+                    <h4>
+                        New IoT Device Launched
+                    </h4>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.
+                    </p>
+                </div>
+            </div>
+            <div class="cards">
+                <div class="card">
+                    <div class="icon">
+                        <i class="fas fa-bolt"> </i>
+                    </div>
+                    <h3>
+                        Active Energy Import
+                    </h3>
+                    <p id="active_energy_import">
+                    </p>
+                </div>
+                <div class="card">
+                    <div class="icon">
+                        <i class="fas fa-bolt"> </i>
+                    </div>
+                    <h3>
+                        Active Energy Export
+                    </h3>
+                    <p id="active_energy_export">
+                    </p>
+                </div>
+                <div class="card">
+                    <div class="icon">
+                        <i class="fas fa-bolt"> </i>
+                    </div>
+                    <h3>
+                        Apparent Energy Export
+                    </h3>
+                    <p id="apparent_energy_export">
+                    </p>
+                </div>
+                <div class="card">
+                    <div class="icon">
+                        <i class="fas fa-bolt"> </i>
+                    </div>
+                    <h3>
+                        Apparent Energy Import
+                    </h3>
+                    <p id="apparent_energy_import">
+                    </p>
+                </div>
+                <div class="card">
+                    <div class="icon">
+                        <i class="fas fa-bolt"> </i>
+                    </div>
+                    <h3>
+                        Reactive Energy Export
+                    </h3>
+                    <p id="reactive_energy_export">
+                    </p>
+                </div>
+                <div class="card">
+                    <div class="icon">
+                        <i class="fas fa-bolt"> </i>
+                    </div>
+                    <h3>
+                        Reactive Energy Import
+                    </h3>
+                    <p id="reactive_energy_import">
+                    </p>
+                </div>
+                <div class="card">
+                    <div class="icon">
+                        <i class="fas fa-bolt"> </i>
+                    </div>
+                    <h3>
+                        Instantaneous Current L1
+                    </h3>
+                    <p id="instantaneous_current_L1">
+                    </p>
+                </div>
+                <div class="card">
+                    <div class="icon">
+                        <i class="fas fa-bolt"> </i>
+                    </div>
+                    <h3>
+                        Instantaneous Current L2
+                    </h3>
+                    <p id="instantaneous_current_L2">
+                    </p>
+                </div>
+                <div class="card">
+                    <div class="icon">
+                        <i class="fas fa-bolt"> </i>
+                    </div>
+                    <h3>
+                        Instantaneous Current L3
+                    </h3>
+                    <p id="instantaneous_current_L3">
+                    </p>
+                </div>
+                <div class="card">
+                    <div class="icon">
+                        <i class="fas fa-bolt"> </i>
+                    </div>
+                    <h3>
+                        Instantaneous Power Factor
+                    </h3>
+                    <p id="instantaneous_power_factor">
+                    </p>
+                </div>
+                <div class="card">
+                    <div class="icon">
+                        <i class="fas fa-bolt"> </i>
+                    </div>
+                    <h3>
+                        Instantaneous Voltage L1
+                    </h3>
+                    <p id="instantaneous_voltage_L1">
+                    </p>
+                </div>
+                <div class="card">
+                    <div class="icon">
+                        <i class="fas fa-bolt"> </i>
+                    </div>
+                    <h3>
+                        Instantaneous Voltage L2
+                    </h3>
+                    <p id="instantaneous_voltage_L2">
+                    </p>
+                </div>
+                <div class="card">
+                    <div class="icon">
+                        <i class="fas fa-bolt"> </i>
+                    </div>
+                    <h3>
+                        Instantaneous Voltage L3
+                    </h3>
+                    <p id="instantaneous_voltage_L3">
+                    </p>
+                </div>
+            </div>
+            <div class="chart-section">
+                <h2>
+                    Chart
+                </h2>
+                <div class="chart">
+                    <h2>
+                        Performance Chart 1
+                    </h2>
+                    <canvas id="voltageChart" width="600" height="400"></canvas>
+                </div>
+                <!-- <div class="chart">
+                    <h2>
+                        Performance Chart 2
+                    </h2>
+                    <canvas id="active_energy_export_chart" width="600" height="400"></canvas>
+                </div> -->
+            </div>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.1/mqttws31.min.js"></script>
+        <script src="script.js">
+        </script>
+    </body>
+</html>

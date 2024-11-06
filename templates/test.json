@@ -1,0 +1,49 @@
+{
+    counter: 1,
+    data: "{"
+        meter_type":"mk10m",
+        "data_type":"instant data",
+        "reading_time":"2024-10-26 06:10:03",
+        "meter_serial_number":"251400321",
+        "active_energy_import":49927072,
+        "active_energy_export":0,
+        "reactive_energy_import":82461,
+        "reactive_energy_export":27877274,
+        "apparent_energy_import":105524051,
+        "apparent_energy_export":0,
+        "instantaneous_volatage_L1":228.217,
+        "instantaneous_volatage_L2":228.282,
+        "instantaneous_volatage_L3":230.126,
+        "instantaneous_current_L1":0.387,
+        "instantaneous_current_L2":0.403,
+        "instantaneous_current_L3":0.41400000000000003,
+        "instantaneous_net_frequency":49.97,
+        "instantaneous_power_factor":0.08979999999999999,
+        "create_date":"2024-10-26 06:10:06",
+        "raw":"0f80000000000212167016c806671c254b0a09323531343030333231150000000002f9d3a015000000000000000015000000000001421d150000000001a95f9a1500000000064a2b531500000000000000000600037b790600037bba06000382ee06000001830600000193060000019e1213850500000382"
+        }",
+    devEui: "123494e68681e40c",
+    port: 11,
+    radio: "{"
+        modulation":{"
+            bandwidth":125000,
+            "type":"LORA",
+            "spreading":8,
+            "coderate":"4/5"},
+        "hardware":{"
+            status":1,
+            "chain":0,
+            "tmst":0,
+            "snr":1,
+            "rssi":-114,
+            "channel":0,
+            "gps":{"
+                lat":-6.237232685089111,
+                "lng":106.79916381835938,
+                "alt":12}
+            },
+        "freq":921.8,
+        "datarate":4,
+        "time":1729897774.8805263
+        }",
+    type: "uplink"}
