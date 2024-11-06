@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, json
+from flask import Flask, jsonify, json, render_template
 from flask_cors import CORS
 from flask_socketio import SocketIO, emit
 import random
@@ -11,6 +11,10 @@ from datetime import datetime
 app = Flask(__name__)
 CORS(app)
 socketio = SocketIO(app, cors_allowed_origins="*")
+
+@app.route('/')
+def index():
+    return render_template('index.html')
 
 # Konfigurasi MQTT
 MQTT_BROKER = "mqtt.eclipseprojects.io"
@@ -157,4 +161,4 @@ def mqtt_loop():
 
 if __name__ == '__main__':
     socketio.start_background_task(mqtt_client.loop_forever)  # Jalankan loop MQTT di thread terpisah
-    socketio.run(app, debug=False)
+    socketio.run(app, host='0.0.0.0', port='5000', debug=False)
