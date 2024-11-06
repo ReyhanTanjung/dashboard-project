@@ -19,7 +19,7 @@ MQTT_TOPIC_SUBSCRIBE = "evomo/telkomiot/voltage"
 MQTT_TOPIC_PUBLISH = "evomo/telkomiot/final_data"
 
 # Konfigurasi PostgreSQL
-DB_HOST = "localhost"
+DB_HOST = "34.123.56.222"
 DB_PORT = "5432"
 DB_NAME = "metrics_data"
 DB_USER = "postgres"
@@ -87,19 +87,19 @@ def on_message(client, userdata, msg):
         instantaneous_power_factor = data.get("instantaneous_power_factor")
 
         # Simpan data ke database
-        # reading_time_dt = datetime.strptime(reading_time, "%Y-%m-%d %H:%M:%S") if reading_time else None
+        reading_time_dt = datetime.strptime(reading_time, "%Y-%m-%d %H:%M:%S") if reading_time else None
 
-        # # Masukkan data ke dalam tabel PostgreSQL
-        # cursor.execute("""
-        #     INSERT INTO energy_data (reading_time, active_energy_import, active_energy_export, reactive_energy_import, 
-        #                              reactive_energy_export, apparent_energy_import, apparent_energy_export)
-        #     VALUES (%s, %s, %s, %s, %s, %s, %s)
-        # """, (reading_time_dt, active_energy_import, active_energy_export, reactive_energy_import, 
-        #       reactive_energy_export, apparent_energy_import, apparent_energy_export))
+        # Masukkan data ke dalam tabel PostgreSQL
+        cursor.execute("""
+            INSERT INTO energy_data (reading_time, active_energy_import, active_energy_export, reactive_energy_import, 
+                                     reactive_energy_export, apparent_energy_import, apparent_energy_export)
+            VALUES (%s, %s, %s, %s, %s, %s, %s)
+        """, (reading_time_dt, active_energy_import, active_energy_export, reactive_energy_import, 
+              reactive_energy_export, apparent_energy_import, apparent_energy_export))
 
-        # # Commit untuk menyimpan perubahan
-        # conn.commit()
-        # print("Data berhasil disimpan ke database PostgreSQL.")
+        # Commit untuk menyimpan perubahan
+        conn.commit()
+        print("Data berhasil disimpan ke database PostgreSQL.")
         
         # Publikasi data ke mqtt
         payload_to_publish = {
